@@ -622,7 +622,7 @@ class ClarifaiApi(object):
     if data:
       data = json.dumps(data)
     req = RequestWithMethod(url, method, data, headers)
-    print 'TIMEOUT=60'
+    print 'TIMEOUT=120'
     response = urllib2.urlopen(req, timeout=60)
     raw_response = response.read()
     return raw_response
